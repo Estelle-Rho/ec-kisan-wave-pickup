@@ -200,6 +200,13 @@ words.forEach((w, i) => {
   btn.onclick = () => showPanel(i);
   tabsEl.appendChild(btn);
 
+  if(i === 2){
+    const brk = document.createElement('div');
+    brk.style.flexBasis = '100%';
+    brk.style.height = '0';
+    tabsEl.appendChild(brk);
+  }
+
   const panel = document.createElement('div');
   panel.className = 'panel' + (i === 0 ? ' active' : '');
   panel.innerHTML = `
